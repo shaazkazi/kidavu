@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+    @apply dark:bg-gray-900 dark:text-gray-50;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-xl shadow-md p-6;
+    @apply dark:bg-gray-800;
+    transition: all 300ms;
+  }
+  
+  .btn-primary {
+    @apply text-white px-6 py-2 rounded-lg;
+    background-color: theme('colors.blue.500');
+    transition: all 300ms;
+  }
+  
+  .btn-primary:hover {
+    background-color: theme('colors.blue.600');
+  }
+  
+  .btn-secondary {
+    @apply text-white px-6 py-2 rounded-lg;
+    background-color: theme('colors.gray.500');
+    transition: all 300ms;
+  }
+  
+  .btn-secondary:hover {
+    background-color: theme('colors.gray.600');
+  }
+  
+  .input {
+    @apply w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none;
+    @apply border-gray-300 dark:border-gray-700 dark:bg-gray-700;
+  }
+  
+  .input:focus {
+    @apply ring-2;
+    --tw-ring-color: theme('colors.blue.500');
+  }
+}
